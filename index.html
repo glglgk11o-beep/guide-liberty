@@ -118,10 +118,49 @@
       font-size: 14px;
       line-height: 1.7;
     }
+    /* ===== ВЕРХНЕЕ ВИДЕО (hero) ===== */
+.video-hero {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+.video-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== НИЖНЕЕ ВИДЕО (маленькое) ===== */
+.video-full {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+.video-full .video-box {
+  width: min(820px, 100%);
+}
+.video-full video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  background: #000;
+  outline: none;
+}
   </style>
 </head>
 
 <body>
+  <!-- ===== ВЕРХНЕЕ ВИДЕО ===== -->
+<section class="video-hero">
+  <video autoplay muted loop playsinline preload="metadata">
+    <source src="./video/Liberty.mp4" type="video/mp4">
+  </video>
+</section>
   <div class="container">
     <h1>📘 Регламент операционной деятельности: Специалист оперативной поддержки</h1>
 
@@ -366,6 +405,15 @@
         Дата следующего пересмотра:<br>
         Ответственный за актуальность: Vyhodsilychh
       </div>
+
+      <!-- ===== НИЖНЕЕ ВИДЕО ===== -->
+<div class="video-full">
+  <div class="video-box">
+    <video autoplay muted loop playsinline preload="metadata">
+      <source src="./video/Liberty.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
 
     </div>
   </div>
